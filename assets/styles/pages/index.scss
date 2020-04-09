@@ -1,0 +1,126 @@
+@import '../vars.scss';
+
+.hero {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 0 50px 0px;
+  box-sizing: border-box;
+
+  h1 {
+    margin: 0;
+    font-size: 2.8vw;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+
+    @media (max-width: $breakpoint-m) {
+      font-size: 4vw;
+    }
+    @media (max-width: $breakpoint-s) {
+      font-size: 30px;
+    }
+    @media (max-width: $breakpoint-xs) {
+      font-size: 25px;
+    }
+  }
+}
+
+.page.is-mobile-or-tablet .work {
+  padding: 0 0 50px 0;
+  margin: 0;
+}
+
+.works {
+  padding: 50px 0;
+
+  .work {
+    position: relative;
+    display: flex;
+    margin: 0 0 50px 0;
+    text-decoration: none;
+    color: $text-color;
+
+    * {
+      margin: 0;
+    }
+
+    .work-inner {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .work-name,
+    .work-desc,
+    .work-tags {
+      width: calc(100% - 60px);
+
+      @media (max-width: $breakpoint-m) {
+        width: calc(100%);
+      }
+    }
+
+    .work-name {
+      text-transform: uppercase;
+      font-size: 27px;
+    }
+
+    .work-desc,
+    .work-tags {
+      font-size: 22px;
+      color: $text-color-light;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .work-desc {
+      margin: 10px 0;
+    }
+
+    .work-tags {
+      text-transform: uppercase;
+    }
+
+    img {
+      position: absolute;
+      right: 50px;
+      width: 40px;
+      opacity: 0;
+      transform: translate(10px, 10px);
+      transition: all 0.2s ease-in-out;
+      @media (max-width: $breakpoint-s) {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &.focused {
+      .work-inner {
+        background: #ffffff;
+        color: #000000;
+        transform: scale(1.05);
+      }
+
+      .work-desc,
+      .work-tags {
+        color: #000000;
+      }
+
+      img {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+}

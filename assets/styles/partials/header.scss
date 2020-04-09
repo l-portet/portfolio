@@ -1,0 +1,51 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -0.7px;
+  position: fixed;
+  padding: 50px 250px 50px 250px;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: backdrop-filter 0.2s ease-in-out, background 0.2s ease-in-out,
+    height 0.2s ease-in-out;
+  height: 70px;
+  z-index: 10;
+
+  @media (max-width: $breakpoint-s) {
+    font-size: 25px;
+  }
+
+  &.scrolled {
+    backdrop-filter: blur(80px) saturate(120%);
+    background: rgba(0, 0, 0, 0.1);
+    height: 0px;
+  }
+  &.scrolled-anim-fix {
+    backdrop-filter: blur(80px) saturate(120%) brightness(120%);
+  }
+
+  * {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+
+    * {
+      margin-left: 30px;
+    }
+  }
+
+  @media (max-width: $breakpoint-m) {
+    padding: 50px 50px 50px 50px;
+  }
+  @media (max-width: $breakpoint-s) {
+    padding: 50px 20px 50px 20px;
+  }
+}

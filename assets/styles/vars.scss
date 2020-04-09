@@ -1,0 +1,17 @@
+$breakpoint-l: 1050px;
+$breakpoint-m: 1050px;
+$breakpoint-s: 800px;
+$breakpoint-xs: 550px;
+
+$font-stack: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+$default-bg: #30353b;
+$default-bg-gradient: linear-gradient(to top right, #24282c, #3c434a);
+
+$text-color: #ffffff;
+$text-color-light: rgba(255, 255, 255, 0.8);
+
+:export {
+  default-bg-gradient: $default-bg-gradient;
+}
