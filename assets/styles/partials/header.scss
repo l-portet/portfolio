@@ -2,21 +2,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: -0.7px;
   position: fixed;
-  padding: 50px 250px 50px 250px;
+  padding: 40px 200px 40px 200px;
   top: 0;
   left: 0;
   right: 0;
   transition: backdrop-filter 0.2s ease-in-out, background 0.2s ease-in-out,
     height 0.2s ease-in-out;
-  height: 70px;
+  height: 55px;
   z-index: 10;
 
   @media (max-width: $breakpoint-s) {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   &.scrolled {
@@ -43,9 +43,9 @@ header {
   }
 
   @media (max-width: $breakpoint-m) {
-    padding: 50px 50px 50px 50px;
+    padding: 40px 40px 40px 40px;
   }
   @media (max-width: $breakpoint-s) {
-    padding: 50px 20px 50px 20px;
+    padding: 40px 16px 40px 16px;
   }
 }

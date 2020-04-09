@@ -2,7 +2,7 @@
 
 .hero {
   width: 100%;
-  height: 300px;
+  height: 240px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -23,7 +23,7 @@
       font-size: 30px;
     }
     @media (max-width: $breakpoint-xs) {
-      font-size: 25px;
+      font-size: 22px;
     }
   }
 }
@@ -39,7 +39,7 @@
   .work {
     position: relative;
     display: flex;
-    margin: 0 0 50px 0;
+    margin: 0 0 40px 0;
     text-decoration: none;
     color: $text-color;
 
@@ -55,7 +55,7 @@
       flex-direction: column;
       width: 100%;
       height: 100%;
-      padding: 50px;
+      padding: 40px;
       border-radius: 10px;
       background: rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -67,25 +67,25 @@
     .work-tags {
       width: calc(100% - 60px);
 
-      @media (max-width: $breakpoint-m) {
+      @media (max-width: $breakpoint-s) {
         width: calc(100%);
       }
     }
 
     .work-name {
       text-transform: uppercase;
-      font-size: 27px;
+      font-size: 22px;
     }
 
     .work-desc,
     .work-tags {
-      font-size: 22px;
+      font-size: 18px;
       color: $text-color-light;
       transition: all 0.2s ease-in-out;
     }
 
     .work-desc {
-      margin: 10px 0;
+      margin: 8px 0;
     }
 
     .work-tags {

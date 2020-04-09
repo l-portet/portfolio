@@ -1,5 +1,5 @@
 .contact-section {
-  margin: 50px 0;
+  margin: 40px 0;
   .contact {
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@
       color: $text-color;
       text-decoration: none;
       width: 33.33%;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
 
       @media (max-width: $breakpoint-s) {
         width: 50%;
@@ -22,18 +22,19 @@
       .contact-item-name {
         font-weight: bold;
         text-transform: uppercase;
-        font-size: 1.15em;
+        font-size: 0.9em;
         transition: all 0.2s ease-in-out;
         @media (max-width: $breakpoint-m) {
-          font-size: 1.05em;
+          font-size: 0.82em;
         }
       }
 
       .contact-item-content {
         color: $text-color-light;
         transition: all 0.2s ease-in-out;
+        font-size: .9em;
         @media (max-width: $breakpoint-m) {
-          font-size: 1em;
+          font-size: .8em;
         }
       }
 
