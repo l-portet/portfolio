@@ -18,11 +18,6 @@
         between the chaos of the machine and human language.
       </p>
       <p>
-        Currently, I work as software engineer at
-        <a href="https://joyz-pro.fr/">Joyz</a> where we're transforming how we
-        experience booking activities.
-      </p>
-      <p>
         Feel free to <a href="/resume.pdf">grab my resume</a> or
         <a href="mailto:lucasportet@gmail.com?subject=Hey">reach me out</a>.
       </p>
