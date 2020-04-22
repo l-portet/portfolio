@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <a href="https://www.youtube.com/watch?v=EpPApVwBs-U" target="_blank"
+    <a href="https://soundcloud.com/rinsefm/mallgrab201119" target="_blank"
       >Take me to good vibes</a
     >
     <a class="footer-loc" :href="locationLink" target="_blank">

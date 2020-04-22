@@ -1,6 +1,7 @@
 <template>
   <div :class="{ page: true, 'is-mobile-or-tablet': isMobileOrTablet }">
     <the-dynamic-bg :raw-bg="bg" />
+    <the-blob />
     <div class="hero">
       <h1>
         I’m Lucas, a full-stack developer<br />
@@ -23,6 +24,7 @@ import TheHeader from '@/components/TheHeader';
 import TheWorks from '@/components/TheWorks';
 import TheContact from '@/components/TheContact';
 import TheDynamicBg from '@/components/TheDynamicBg';
+import TheBlob from '@/components/TheBlob';
 import TheFooter from '@/components/TheFooter';
 
 export default {
@@ -32,6 +34,7 @@ export default {
     TheWorks,
     TheContact,
     TheDynamicBg,
+    TheBlob,
     TheFooter
   },
   data() {
@@ -41,6 +44,7 @@ export default {
     };
   },
   mounted() {
+    console.log('bar')
     this.isMobileOrTablet = this.$isMobileOrTablet();
   },
   methods: {

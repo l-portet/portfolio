@@ -21,8 +21,12 @@ header {
 
   &.scrolled {
     backdrop-filter: blur(80px) saturate(120%);
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(45, 52, 59, .5);
     height: 0px;
+
+    @supports (backdrop-filter: blur(80px) saturate(120%)) {
+      background: rgba(0, 0, 0, 0.1);
+    }
   }
   &.scrolled-anim-fix {
     backdrop-filter: blur(80px) saturate(120%) brightness(120%);
