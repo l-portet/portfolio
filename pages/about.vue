@@ -18,8 +18,13 @@
         between the chaos of the machine and human language.
       </p>
       <p>
-        Feel free to <a href="/resume.pdf">grab my resume</a> or
-        <a href="mailto:lucasportet@gmail.com?subject=Hey">reach me out</a>.
+        My work is pretty inspired by folks like
+        <a href="https://codepen.io/aaroniker" target="_blank">Aaron Iker</a> or
+        <a href="https://hakim.se/" target="_blank">Hakim El Hattab</a> on the interfaces and <a href="https://evanyou.me/">Evan You</a> or <a href="https://tinyclouds.org/">Ryan Dahl</a> on the code side.
+      </p>
+      <p>
+        Feel free to <a href="/resume.pdf" target="_blank">grab my resume</a> or
+        reach me out.
       </p>
     </div>
     <the-contact

@@ -9,6 +9,7 @@
       @mouseover="$emit('workhover', work.gradient)"
       @mouseleave="$emit('workleave')"
       :href="work.href"
+      target="_blank"
     >
       <div class="work-inner">
         <h3 class="work-name">{{ work.name }}</h3>
@@ -59,8 +60,7 @@ export default {
             from: '#FF6831',
             to: '#FFAA55'
           },
-          // TODO Change
-          href: 'https://example.com'
+          href: 'https://marvelapp.com/adcdg4b'
         },
         {
           name: 'Asheal',

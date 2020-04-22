@@ -58,15 +58,16 @@
         bottom: 2px;
         width: 100%;
         height: 3px;
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.2);
         z-index: 1;
         transition: all 0.2s ease-in-out;
       }
 
       &:hover {
-        color: $text-color;
+        color: $link-color-hover;
         &:before {
-          background: $text-color-light;
+          background: $link-color-hover;
+          opacity: .7;
         }
       }
     }

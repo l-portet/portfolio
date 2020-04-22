@@ -50,6 +50,15 @@ export default {
           href: 'https://twitter.com/lucasportet'
         },
         {
+          name: 'Codepen',
+          content: '@l-portet',
+          gradient: {
+            from: '#e4bd09',
+            to: '#e4bd09'
+          },
+          href: 'https://codepen.io/l-portet'
+        },
+        {
           name: 'Github',
           content: '@l-portet',
           gradient: {
@@ -66,15 +75,6 @@ export default {
             to: '#0177B5'
           },
           href: 'https://www.linkedin.com/in/lucasportet/'
-        },
-        {
-          name: 'Codepen',
-          content: '@l-portet',
-          gradient: {
-            from: '#e4bd09',
-            to: '#e4bd09'
-          },
-          href: 'https://codepen.io/l-portet'
         },
         {
           name: 'Stack',
@@ -106,7 +106,7 @@ export default {
       this.$emit('contacthover', item.gradient);
     },
     onContactClick(item) {
-      if (!this.clipboardAction) return;
+      if (!item.clipboardAction) return;
       let tmp = item.hoverContent;
 
       item.hoverContent = 'Copied !';

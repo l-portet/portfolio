@@ -44,7 +44,6 @@ export default {
     };
   },
   mounted() {
-    console.log('bar')
     this.isMobileOrTablet = this.$isMobileOrTablet();
   },
   methods: {
