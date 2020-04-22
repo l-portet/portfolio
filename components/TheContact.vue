@@ -6,20 +6,22 @@
         v-for="(contact, index) in contacts"
         :key="index"
         @mouseover="onContactHover(contact, index)"
-        @click="onContactClick($event, contact)"
+        @click="onContactClick(contact)"
         @mouseleave="onContactLeave"
         :class="{
           'contact-item': true,
           'hover-soft': hoverItemIdx === index && contact.hoverContent
         }"
         :href="contact.href"
+        :id="contact.id || ''"
+        :data-clipboard-text="
+          contact.clipboardAction ? contact.clipboardContent : ''
+        "
       >
         <span class="contact-item-name">{{ contact.name }}</span>
         <span class="contact-item-content"
           ><span class="default-content">{{ contact.content }}</span
-          ><span class="hover-content">{{
-            contact.hoverContent
-          }}</span></span
+          ><span class="hover-content">{{ contact.hoverContent }}</span></span
         >
         <img
           src="@/static/icons/return-arrow-white.png"
@@ -31,6 +33,8 @@
   </div>
 </template>
 <script>
+import ClipboardJS from 'clipboard';
+
 export default {
   data() {
     return {
@@ -84,13 +88,14 @@ export default {
         {
           name: 'Email',
           content: '@gmail.com',
+          id: 'contact-email',
           gradient: {
             from: '#D33D31',
             to: '#D33D31'
           },
-          href: 'mailto:lucasportet@gmail.com?subject=Hey',
-          action: 'copyToClipboard',
-          hoverContent: 'Copy to clipboard ?'
+          hoverContent: 'Copy to clipboard ?',
+          clipboardContent: 'lucasportet@gmail.com',
+          clipboardAction: true
         }
       ]
     };
@@ -100,16 +105,25 @@ export default {
       this.hoverItemIdx = index;
       this.$emit('contacthover', item.gradient);
     },
-    onContactClick(e, item) {
-      e.preventDefault();
-      if (typeof this[item.action] === 'function') this[item.action]();
+    onContactClick(item) {
+      if (!this.clipboardAction) return;
+      let tmp = item.hoverContent;
+
+      item.hoverContent = 'Copied !';
+      setTimeout(() => {
+        item.hoverContent = tmp;
+      }, 2000);
     },
     onContactLeave(item) {
       this.$emit('contactleave');
       this.hoverItemIdx = -1;
-    },
-    copyToClipboard() {
-      console.log('hello');
+    }
+  },
+  mounted() {
+    for (let contact of this.contacts) {
+      if (contact.clipboardAction) {
+        new ClipboardJS(`#${contact.id}`);
+      }
     }
   }
 };

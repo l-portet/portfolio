@@ -14,7 +14,8 @@
       text-decoration: none;
       width: 33.33%;
       margin-bottom: 40px;
-      padding-bottom: 25px;
+      padding-bottom: 30px;
+      cursor: pointer;
 
       @media (max-width: $breakpoint-s) {
         width: 50%;
