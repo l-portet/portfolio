@@ -30,6 +30,10 @@ footer {
     text-decoration: none;
     margin: 4px 0;
 
+    &.good-vibes {
+      letter-spacing: .7px;
+    }
+
     &:hover {
       color: $text-color;
     }

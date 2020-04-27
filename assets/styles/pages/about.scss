@@ -52,11 +52,11 @@
       transition: all 0.2s ease-in-out;
       font-weight: 600;
 
-      box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.2);
+      box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.2);
 
       &:hover {
         color: $link-color-hover;
-        box-shadow: 0px 4px 0px $link-color-hover;
+        box-shadow: 0px 2px 0px $link-underline-color-hover;
       }
     }
   }

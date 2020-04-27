@@ -23,8 +23,7 @@
         <a href="https://hakim.se/" target="_blank">Hakim El Hattab</a> on the interfaces and <a href="https://evanyou.me/">Evan You</a> or <a href="https://tinyclouds.org/">Ryan Dahl</a> on the code side.
       </p>
       <p>
-        Feel free to <a href="/resume.pdf" target="_blank">grab my resume</a> or
-        reach me out.
+        Feel free to <a href="/resume-en.pdf" target="_blank">grab my resume</a> (speaking the language of Molière? Here's a <a href="/resume-fr.pdf" target="_blank">french version</a>).
       </p>
     </div>
     <the-contact
