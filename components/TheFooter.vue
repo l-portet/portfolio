@@ -1,7 +1,7 @@
 <template>
   <footer>
     <a
-      href="https://www.youtube.com/watch?v=aZtFi_A3M5A&list=PL-gT7EwROy0VqNwItoZzM8lLFZZscpsHS&index=7&t=0s"
+      href="https://www.youtube.com/watch?v=EpPApVwBs-U"
       target="_blank"
       class="good-vibes"
       >Take me to good vibes</a
