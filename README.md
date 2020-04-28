@@ -1,6 +1,7 @@
-# portfolio-2020
+# Portfolio
+> Personal portfolio, [live demo](https://lucasportet.com).
 
-> My grand Nuxt.js project
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a9b61e4a-4b06-41a3-809f-50c402eee27f/deploy-status)](https://app.netlify.com/sites/kind-visvesvaraya-ec78b6/deploys)
 
 ## Build Setup
 
