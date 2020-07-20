@@ -6,7 +6,7 @@
       <h1>Hi, I’m Lucas <img src="@/static/icons/waving-hand.png" /></h1>
       <p>
         I'm a french interdisciplinary developer working at the crossroads of
-        technology, design, and business.
+        technology, design, and marketing.
       </p>
       <p>
         Over the last years, I've had the chance to help companies validate,
@@ -20,10 +20,23 @@
       <p>
         My work is pretty inspired by folks like
         <a href="https://codepen.io/aaroniker" target="_blank">Aaron Iker</a> or
-        <a href="https://hakim.se/" target="_blank">Hakim El Hattab</a> on the interfaces and <a href="https://evanyou.me/">Evan You</a> or <a href="https://tinyclouds.org/">Ryan Dahl</a> on the code side.
+        <a href="https://hakim.se/" target="_blank">Hakim El Hattab</a> on the
+        interfaces and <a href="https://evanyou.me/">Evan You</a> or
+        <a href="https://tinyclouds.org/">Ryan Dahl</a> on the code side.
       </p>
       <p>
-        Feel free to <a href="/resume-en.pdf" target="_blank">grab my resume</a> (speaking the language of Molière? Here's a <a href="/resume-fr.pdf" target="_blank">french version</a>).
+        If I had to quote some useful resources I use, check, or help me almost
+        every day, I would talk about
+        <a href="https://growth.design">growth.design</a>,
+        <a href="https://daily.dev">daily.dev</a>, and
+        <a href="https://producthunt.com">producthunt</a>.
+      </p>
+      <br />
+      <p>
+        Feel free to
+        <a href="/resume-en.pdf" target="_blank">grab my resume</a> (speaking
+        the language of Molière? Here's a
+        <a href="/resume-fr.pdf" target="_blank">french version</a>).
       </p>
     </div>
     <the-contact
