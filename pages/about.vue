@@ -29,7 +29,7 @@
         every day, I would talk about
         <a href="https://growth.design">growth.design</a>,
         <a href="https://daily.dev">daily.dev</a>, and
-        <a href="https://producthunt.com">producthunt</a>.
+        <a href="https://www.indiehackers.com/">Indie Hackers</a>.
       </p>
       <br />
       <p>
