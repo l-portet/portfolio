@@ -29,6 +29,9 @@ export default {
       },
       {
         src: '/js/ga.js'
+      },
+      {
+        src: '/js/hj.js'
       }
     ]
   },
