@@ -6,7 +6,7 @@
       <h1>Hi, I’m Lucas <img src="@/static/icons/waving-hand.png" /></h1>
       <p>
         I'm a french interdisciplinary developer working at the crossroads of
-        technology, design, and marketing.
+        technology, marketing, and design.
       </p>
       <p>
         Over the last years, I've had the chance to help companies validate,
