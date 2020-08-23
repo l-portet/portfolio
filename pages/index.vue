@@ -4,9 +4,9 @@
     <the-blob />
     <div class="hero">
       <h1>
-        I’m Lucas, a full-stack developer<br />
-        focused on making meaningful<br />
-        interfaces and experiences.
+        I’m Lucas, an interdisciplinary<br />
+        maker focused on making<br />
+        meaningful digital products.
       </h1>
     </div>
     <the-header />

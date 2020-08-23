@@ -3,26 +3,24 @@
     <the-dynamic-bg :raw-bg="bg" />
     <the-header />
     <div class="about">
+      <div class="profile-picture"></div>
       <h1>Hi, I’m Lucas <img src="@/static/icons/waving-hand.png" /></h1>
       <p>
-        I'm a french interdisciplinary developer working at the crossroads of
+        I'm a french interdisciplinary maker working at the crossroads of
         technology, marketing, and design.
       </p>
       <p>
-        Over the last years, I've had the chance to help companies validate,
-        prototype and launch digital products that help improve how we live
-        today.
-      </p>
-      <p>
-        I love to craft interfaces from A to Z. I see my role as the bridge
-        between the chaos of the machine and human language.
+        With a strong entrepreneur mindset, I've had the chance to help
+        companies validate, prototype and build digital products.
       </p>
       <p>
         My work is pretty inspired by folks like
         <a href="https://codepen.io/aaroniker" target="_blank">Aaron Iker</a> or
         <a href="https://hakim.se/" target="_blank">Hakim El Hattab</a> on the
-        interfaces and <a href="https://evanyou.me/">Evan You</a> or
-        <a href="https://tinyclouds.org/">Ryan Dahl</a> on the code side.
+        interfaces and
+        <a href="https://evanyou.me/" target="_blank">Evan You</a> or
+        <a href="https://tinyclouds.org/" target="_blank">Ryan Dahl</a> on the
+        code side.
       </p>
       <p>
         If I had to quote some useful resources I use, check, or help me almost

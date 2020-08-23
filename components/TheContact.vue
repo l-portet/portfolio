@@ -50,6 +50,27 @@ export default {
           href: 'https://twitter.com/lucasportet'
         },
         {
+          name: 'Email',
+          content: '@gmail.com',
+          id: 'contact-email',
+          gradient: {
+            from: '#D33D31',
+            to: '#D33D31'
+          },
+          hoverContent: 'Copy to clipboard ?',
+          clipboardContent: 'lucasportet@gmail.com',
+          clipboardAction: true
+        },
+        {
+          name: 'Linkedin',
+          content: '@lucasportet',
+          gradient: {
+            from: '#0177B5',
+            to: '#0177B5'
+          },
+          href: 'https://www.linkedin.com/in/lucasportet/'
+        },
+        {
           name: 'Codepen',
           content: '@l-portet',
           gradient: {
@@ -62,19 +83,10 @@ export default {
           name: 'Github',
           content: '@l-portet',
           gradient: {
-            from: '#28a745', //'#333',
-            to: '#28a745' //'#333'
+            from: '#28a745',
+            to: '#28a745'
           },
           href: 'https://github.com/l-portet'
-        },
-        {
-          name: 'Linkedin',
-          content: '@lucasportet',
-          gradient: {
-            from: '#0177B5',
-            to: '#0177B5'
-          },
-          href: 'https://www.linkedin.com/in/lucasportet/'
         },
         {
           name: 'Stack',
@@ -84,18 +96,6 @@ export default {
             to: '#f48024'
           },
           href: 'https://stackoverflow.com/users/9180619/l-portet'
-        },
-        {
-          name: 'Email',
-          content: '@gmail.com',
-          id: 'contact-email',
-          gradient: {
-            from: '#D33D31',
-            to: '#D33D31'
-          },
-          hoverContent: 'Copy to clipboard ?',
-          clipboardContent: 'lucasportet@gmail.com',
-          clipboardAction: true
         }
       ]
     };
