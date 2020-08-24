@@ -5,7 +5,7 @@
     <div class="hero">
       <h1>
         I’m Lucas, an interdisciplinary<br />
-        maker focused on making<br />
+        maker focused on crafting<br />
         meaningful digital products.
       </h1>
     </div>
