@@ -70,7 +70,7 @@ export default {
             from: '#009593',
             to: '#F0EC58'
           },
-          href: 'https://asheal.com'
+          href: 'https://www.futura-sciences.com/tech/actualites/technologie-reduire-temps-passe-salle-attente-chez-medecin-78874'
         },
         {
           name: 'Surebet finder',
