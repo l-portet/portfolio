@@ -8,6 +8,7 @@
       <p>
         I'm a french interdisciplinary maker working at the crossroads of
         technology, marketing, and design.
+        Currently working <a href="https://deux.io" target="_blank">@deux.io</a>.
       </p>
       <p>
         With a strong entrepreneur mindset, I've had the chance to help
