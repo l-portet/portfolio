@@ -31,6 +31,17 @@ export default {
       focusedIndex: -1,
       dataWorks: [
         {
+          name: 'Nocode Jungle',
+          desc: 'Nocode plugins, themes & education',
+          tags: ['front', 'nocode'],
+          gradient: {
+            from: '#0a1062',
+            to: '#000ae3'
+          },
+          href:
+            'https://bubble.io/contributor/nocodejungle-1596293564070x233339286665744000'
+        },
+        {
           name: 'Corona tracker',
           desc:
             'An interactive covid 19 tracking app with real-time data updates',
@@ -39,7 +50,6 @@ export default {
             from: '#B02C18',
             to: '#E63A8A'
           },
-          // TODO Change
           href: 'https://github.com/l-portet/coronavirus-data'
         },
         {
@@ -70,7 +80,8 @@ export default {
             from: '#009593',
             to: '#F0EC58'
           },
-          href: 'https://www.futura-sciences.com/tech/actualites/technologie-reduire-temps-passe-salle-attente-chez-medecin-78874'
+          href:
+            'https://www.futura-sciences.com/tech/actualites/technologie-reduire-temps-passe-salle-attente-chez-medecin-78874'
         },
         {
           name: 'Surebet finder',
