@@ -20,7 +20,7 @@ header {
   }
 
   &.scrolled {
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
     background: rgba(45, 52, 59, .5);
     height: 0px;
 
