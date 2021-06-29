@@ -31,8 +31,18 @@ export default {
       focusedIndex: -1,
       dataWorks: [
         {
+          name: 'MACAS Studio',
+          desc: 'Building apps that make ecommerce sell more',
+          tags: ['shopify', 'fullstack'],
+          gradient: {
+            from: '#fb8085',
+            to: '#f9c1b1'
+          },
+          href: 'https://macas.studio'
+        },
+        {
           name: 'Nocode Jungle',
-          desc: 'Nocode plugins, themes & education',
+          desc: 'Bubble plugins & content',
           tags: ['front', 'nocode'],
           gradient: {
             from: '#0a1062',
@@ -75,7 +85,7 @@ export default {
         {
           name: 'Asheal',
           desc: 'Crafting the future of medicine',
-          tags: ['branding', 'ui', 'front', 'back'],
+          tags: ['branding', 'ui', 'fullstack'],
           gradient: {
             from: '#009593',
             to: '#F0EC58'
@@ -108,12 +118,12 @@ export default {
   mounted() {
     if (this.$isMobileOrTablet()) {
       this.removeLinkFocus();
-      document.addEventListener('scroll', this.checkScroll);
+      document.addEventListener('scroll', this.handleScroll);
     }
   },
   methods: {
     removeLinkFocus() {},
-    checkScroll() {
+    handleScroll() {
       let check = false;
       let i = 0;
 

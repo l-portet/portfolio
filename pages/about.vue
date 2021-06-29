@@ -8,8 +8,12 @@
       <p>
         I'm a french interdisciplinary maker working at the crossroads of
         technology, marketing, and design.
-        Currently working <a href="https://deux.io" target="_blank">@deux.io</a>.
       </p>
+      <p>
+        Currently building apps that make ecommerce sell more
+        <a href="https://macas.studio" target="_blank">@MACAS Studio</a>.
+      </p>
+      <br />
       <p>
         With a strong entrepreneur mindset, I've had the chance to help
         companies validate, prototype and build digital products.
