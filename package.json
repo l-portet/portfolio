@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-2020",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "My grand Nuxt.js project",
+  "description": "Personal portfolio",
   "author": "Lucas Portet",
   "private": true,
   "scripts": {
@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "clipboard": "^2.0.6",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "node-sass": "^6.0.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^10.1.1",
     "sass-resources-loader": "^2.0.1"
   }
 }
