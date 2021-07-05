@@ -32,6 +32,23 @@ export default {
       },
       {
         src: '/js/hj.js'
+      },
+      {
+        type: 'application/ld+json',
+        json: {
+          '@context': 'http://www.schema.org',
+          '@type': 'Person',
+          name: 'Lucas Portet',
+          jobTitle: 'Co-founder @MACAS Studio',
+          url: 'https://lucasportet.com',
+          image: 'https://lucasportet.com/img/pp.png',
+          nationality: 'French',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Paris',
+            addressCountry: 'France'
+          }
+        }
       }
     ]
   },
