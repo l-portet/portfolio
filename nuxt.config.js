@@ -47,7 +47,14 @@ export default {
             '@type': 'PostalAddress',
             addressLocality: 'Paris',
             addressCountry: 'France'
-          }
+          },
+          sameAs: [
+            'https://twitter.com/lucasportet',
+            'https://www.linkedin.com/in/lucasportet',
+            'https://github.com/l-portet',
+            'https://codepen.io/l-portet',
+            'https://stackoverflow.com/users/9180619/l-portet'
+          ]
         }
       }
     ]
