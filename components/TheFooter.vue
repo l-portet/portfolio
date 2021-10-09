@@ -15,8 +15,7 @@
 export default {
   data() {
     return {
-      location: `48°52'0.001"N 2°19'59.998"E`
-      // location: `48°07'08.7"N 1°40'48.8"W`
+      location: `34.0201613"N -118.6919205,10"E`
     };
   },
   computed: {

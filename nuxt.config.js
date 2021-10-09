@@ -45,8 +45,8 @@ export default {
           nationality: 'French',
           address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Paris',
-            addressCountry: 'France'
+            addressLocality: 'Los Angeles, CA',
+            addressCountry: 'USA'
           },
           sameAs: [
             'https://twitter.com/lucasportet',
