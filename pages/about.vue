@@ -13,28 +13,11 @@
         Currently building apps that make ecommerce sell more
         <a href="https://macas.studio" target="_blank">@MACAS Studio</a>.
       </p>
-      <br />
       <p>
         With a strong entrepreneur mindset, I've had the chance to help
-        companies validate, prototype and build digital products.
+        companies validate, prototype and build digital products in the past
+        years.
       </p>
-      <p>
-        My work is pretty inspired by folks like
-        <a href="https://codepen.io/aaroniker" target="_blank">Aaron Iker</a> or
-        <a href="https://hakim.se/" target="_blank">Hakim El Hattab</a> on the
-        interfaces and
-        <a href="https://evanyou.me/" target="_blank">Evan You</a> or
-        <a href="https://tinyclouds.org/" target="_blank">Ryan Dahl</a> on the
-        code side.
-      </p>
-      <p>
-        If I had to quote some useful resources I use, check, or help me almost
-        every day, I would talk about
-        <a href="https://growth.design">growth.design</a>,
-        <a href="https://daily.dev">daily.dev</a>, and
-        <a href="https://www.indiehackers.com/">Indie Hackers</a>.
-      </p>
-      <br />
       <p>
         Feel free to
         <a href="/resume-en.pdf" target="_blank">grab my resume</a> (speaking
