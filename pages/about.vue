@@ -21,7 +21,7 @@
       <p>
         Feel free to
         <a href="/resume-en.pdf" target="_blank">grab my resume</a> (speaking
-        the language of Molière? Here's a
+        Molière's language? Here's a
         <a href="/resume-fr.pdf" target="_blank">french version</a>).
       </p>
     </div>
