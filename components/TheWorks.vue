@@ -52,6 +52,16 @@ export default {
             'https://bubble.io/contributor/nocodejungle-1596293564070x233339286665744000'
         },
         {
+          name: 'Smooth dnd experiment',
+          desc: `UX experiment based on Trello's drag & drop system, featured on CodePen`,
+          tags: ['front', 'ui', 'micro-interaction'],
+          gradient: {
+            from: '#0171B1',
+            to: '#2C9ADA'
+          },
+          href: 'https://codepen.io/l-portet/pen/jObbRYJ'
+        },
+        {
           name: 'Corona tracker',
           desc:
             'An interactive covid 19 tracking app with real-time data updates',
