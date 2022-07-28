@@ -18,12 +18,6 @@
         companies validate, prototype and build digital products in the past
         years.
       </p>
-      <p>
-        Feel free to
-        <a href="/resume-en.pdf" target="_blank">grab my resume</a> (speaking
-        Molière's language? Here's a
-        <a href="/resume-fr.pdf" target="_blank">french version</a>).
-      </p>
     </div>
     <the-contact
       @contacthover="setBackground"
