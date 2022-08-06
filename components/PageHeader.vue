@@ -19,6 +19,7 @@ export default {
     };
   },
   mounted() {
+    console.log('ploplopplop')
     this.checkScroll();
     document.addEventListener('scroll', this.checkScroll);
   },

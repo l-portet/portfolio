@@ -1,41 +1,38 @@
 <template>
   <div :class="{ page: true, 'is-mobile-or-tablet': isMobileOrTablet }">
-    <the-dynamic-bg :raw-bg="bg" />
-    <the-blob />
+    <dynamic-bg :raw-bg="bg" />
+    <blob />
     <div class="hero">
       <h1>
         I’m Lucas, an interdisciplinary<br />
-        maker focused on crafting<br />
-        meaningful digital products.
+        software engineer focused on<br />
+        crafting meaningful experiences.
       </h1>
     </div>
-    <the-header />
-    <the-works @workhover="setBackground" @workleave="unsetBackground" />
-    <the-contact
-      @contacthover="setBackground"
-      @contactleave="unsetBackground"
-    />
-    <the-footer />
+    <page-header />
+    <works @workhover="setBackground" @workleave="unsetBackground" />
+    <contact @contacthover="setBackground" @contactleave="unsetBackground" />
+    <footer />
   </div>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader';
-import TheWorks from '@/components/TheWorks';
-import TheContact from '@/components/TheContact';
-import TheDynamicBg from '@/components/TheDynamicBg';
-import TheBlob from '@/components/TheBlob';
-import TheFooter from '@/components/TheFooter';
+import PageHeader from '@/components/PageHeader';
+import Works from '@/components/Works';
+import Contact from '@/components/Contact';
+import DynamicBg from '@/components/DynamicBg';
+import Blob from '@/components/Blob';
+import Footer from '@/components/Footer';
 
 export default {
   transition: 'fade',
   components: {
-    TheHeader,
-    TheWorks,
-    TheContact,
-    TheDynamicBg,
-    TheBlob,
-    TheFooter
+    PageHeader,
+    Works,
+    Contact,
+    DynamicBg,
+    Blob,
+    Footer
   },
   data() {
     return {

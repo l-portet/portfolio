@@ -31,12 +31,22 @@ export default {
       focusedIndex: -1,
       dataWorks: [
         {
+          name: 'Svelte Switch Case',
+          desc: 'Switch case syntax for Svelte components',
+          tags: ['front', 'open source'],
+          gradient: {
+            from: '#701b00',
+            to: '#FF3E00'
+          },
+          href: 'https://github.com/l-portet/svelte-switch-case'
+        },
+        {
           name: 'MACAS Studio',
           desc: 'Building apps that make ecommerce sell more',
           tags: ['shopify', 'fullstack'],
           gradient: {
-            from: '#fb8085',
-            to: '#f9c1b1'
+            from: '#405e04',
+            to: '#B6F041'
           },
           href: 'https://macas.studio'
         },
@@ -52,9 +62,9 @@ export default {
             'https://bubble.io/contributor/nocodejungle-1596293564070x233339286665744000'
         },
         {
-          name: 'Smooth dnd experiment',
+          name: 'Smooth drag & drop',
           desc: `UX experiment based on Trello's drag & drop system, featured on CodePen`,
-          tags: ['front', 'ui', 'micro-interaction'],
+          tags: ['front', 'ux', 'micro-interactions'],
           gradient: {
             from: '#0171B1',
             to: '#2C9ADA'
@@ -62,10 +72,20 @@ export default {
           href: 'https://codepen.io/l-portet/pen/jObbRYJ'
         },
         {
+          name: 'Pizzadoor Stocks Manager',
+          desc: 'Stocks scraper & manager for Adial pizza ATM',
+          tags: ['scraping', 'back'],
+          gradient: {
+            from: '#6e2703',
+            to: '#E54025'
+          },
+          href: 'https://github.com/l-portet/pizzadoor-stocks-manager'
+        },
+        {
           name: 'Corona tracker',
           desc:
-            'An interactive covid 19 tracking app with real-time data updates',
-          tags: ['ui', 'front', 'scraping'],
+            'An interactive covid 19 tracking app with real-time data updates (not active anymore)',
+          tags: ['scraping', 'mobile'],
           gradient: {
             from: '#B02C18',
             to: '#E63A8A'
@@ -94,7 +114,7 @@ export default {
         },
         {
           name: 'Asheal',
-          desc: 'Crafting the future of medicine',
+          desc: 'A medical terminal for pre-diagnosis in waiting rooms',
           tags: ['branding', 'ui', 'fullstack'],
           gradient: {
             from: '#009593',
@@ -127,12 +147,10 @@ export default {
   },
   mounted() {
     if (this.$isMobileOrTablet()) {
-      this.removeLinkFocus();
       document.addEventListener('scroll', this.handleScroll);
     }
   },
   methods: {
-    removeLinkFocus() {},
     handleScroll() {
       let check = false;
       let i = 0;
@@ -159,7 +177,6 @@ export default {
     },
     focusWork(i) {
       let work = this.works[i];
-      let workEl = this.$refs[`work-${i}`] && this.$refs[`work-${i}`][0];
 
       this.focusedIndex = i;
       if (!work || !work.gradient) return;
