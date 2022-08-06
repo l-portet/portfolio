@@ -6,11 +6,11 @@
       <div class="profile-picture"></div>
       <h1>Hi, I’m Lucas <img src="@/static/icons/waving-hand.png" /></h1>
       <p>
-        I'm a french interdisciplinary maker working at the crossroads of
-        technology, marketing, and design.
+        I'm a french interdisciplinary software engineer working at the
+        crossroads of technology, marketing, and design.
       </p>
       <p>
-        Currently building apps that make ecommerce sell more
+        I'm currently building apps that make ecommerce sell more
         <a href="https://macas.studio" target="_blank">@MACAS Studio</a>.
       </p>
       <p>
@@ -19,7 +19,8 @@
         years.
       </p>
       <p>
-        Feel free to <a href="/resume-en.pdf" target="_blank">grab my resume</a>.
+        Feel free to
+        <a href="/resume-en.pdf" target="_blank">grab my resume</a>.
       </p>
     </div>
     <the-contact
