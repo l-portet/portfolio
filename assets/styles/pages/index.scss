@@ -1,4 +1,5 @@
 @import '../vars.scss';
+@import '../mixins.scss';
 
 .hero {
   width: 100%;
@@ -15,6 +16,7 @@
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0;
+    color: rgba($color: #fff, $alpha: 0.6);
 
     @media (min-width: $breakpoint-xxl) {
       font-size: 55px;
@@ -28,10 +30,14 @@
     @media (max-width: $breakpoint-xs) {
       font-size: 22px;
     }
+
+    & > span {
+      color: rgba($color: #fff, $alpha: 1);
+    }
   }
 }
 
-.page.is-mobile-or-tablet .work {
+.is-mobile-or-tablet .work {
   padding: 0 0 50px 0;
   margin: 0;
 }
@@ -63,6 +69,7 @@
       background: rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.2s ease-in-out;
+      backdrop-filter: blur(9px);
     }
 
     .work-name,

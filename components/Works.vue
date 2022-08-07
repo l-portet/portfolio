@@ -6,8 +6,8 @@
       v-for="(work, index) in works"
       :key="index"
       :ref="`work-${index}`"
-      @mouseover="$emit('workhover', work.gradient)"
-      @mouseleave="$emit('workleave')"
+      @mouseover="focusWork(index)"
+      @mouseleave="unFocusWork()"
       :href="work.href"
       target="_blank"
     >
@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   data() {
     return {
@@ -76,8 +78,8 @@ export default {
           desc: 'Stocks scraper & manager for Adial pizza ATM',
           tags: ['scraping', 'back'],
           gradient: {
-            from: '#6e2703',
-            to: '#E54025'
+            from: '#F9484A',
+            to: '#FBD72B'
           },
           href: 'https://github.com/l-portet/pizzadoor-stocks-manager'
         },
@@ -151,6 +153,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['updateBackground', 'resetBackground']),
     handleScroll() {
       let check = false;
       let i = 0;
@@ -181,10 +184,10 @@ export default {
       this.focusedIndex = i;
       if (!work || !work.gradient) return;
 
-      this.$emit('workhover', work.gradient);
+      this.updateBackground(work.gradient);
     },
     unFocusWork() {
-      this.$emit('workleave');
+      this.resetBackground();
       this.focusedIndex = -1;
     }
   }

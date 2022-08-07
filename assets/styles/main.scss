@@ -1,13 +1,15 @@
 @import './fonts.scss';
 @import './vars.scss';
+@import './mixins.scss';
 @import './transitions.scss';
 @import './partials/header.scss';
 @import './partials/blob.scss';
-@import './partials/dynamic-bg.scss';
+@import './partials/dynamic-background.scss';
 @import './partials/contact.scss';
 @import './partials/footer.scss';
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -15,6 +17,7 @@ html, body {
 
 html {
   font-family: $font-stack;
+  color: $text-color;
   font-size: 20px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -22,8 +25,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background: $default-bg;
-  background-image: $default-bg-gradient;
+  background: $default-background;
+  background-image: $default-background-gradient;
+}
+
+::selection {
+  background: rgba(120, 120, 120, 0.3);
 }
 
 h1 {
@@ -35,9 +42,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 1em;
-  margin-top: .5em;
+  margin-top: 0.5em;
   @media (max-width: $breakpoint-m) {
     font-size: 1.3em;
   }
@@ -45,15 +52,16 @@ h2 {
 
 .page {
   position: relative;
-  color: $text-color;
-  padding: 160px 200px 80px 200px;
+  padding: 160px 200px 0px 200px;
   width: 100%;
   box-sizing: border-box;
 
   @media (max-width: $breakpoint-m) {
-    padding: 160px 40px 80px 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   @media (max-width: $breakpoint-s) {
-    padding: 160px 16px 80px 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

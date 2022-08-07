@@ -34,6 +34,7 @@
 </template>
 <script>
 import ClipboardJS from 'clipboard';
+import { mapActions } from 'vuex';
 
 export default {
   data() {
@@ -101,21 +102,22 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['updateBackground', 'resetBackground']),
     onContactHover(item, index) {
       this.hoverItemIdx = index;
-      this.$emit('contacthover', item.gradient);
+      this.updateBackground(item.gradient);
     },
     onContactClick(item) {
       if (!item.clipboardAction) return;
-      let tmp = item.hoverContent;
+      const tmp = item.hoverContent;
 
       item.hoverContent = 'Copied !';
       setTimeout(() => {
         item.hoverContent = tmp;
       }, 2000);
     },
-    onContactLeave(item) {
-      this.$emit('contactleave');
+    onContactLeave() {
+      this.resetBackground();
       this.hoverItemIdx = -1;
     }
   },

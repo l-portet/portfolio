@@ -1,7 +1,6 @@
 <template>
-  <div :class="{ page: true, 'is-mobile-or-tablet': isMobileOrTablet }">
-    <dynamic-bg :raw-bg="bg" />
-    <page-header />
+  <div class="page">
+    <dynamic-background :raw-background="background" />
     <div class="about">
       <div class="profile-picture"></div>
       <h1>Hi, I’m Lucas <img src="@/static/icons/waving-hand.png" /></h1>
@@ -23,43 +22,29 @@
         <a href="/resume-en.pdf" target="_blank">grab my resume</a>.
       </p>
     </div>
-    <contact
-      @contacthover="setBackground"
-      @contactleave="unsetBackground"
-    />
-    <footer />
+    <contact @contacthover="setBackground" @contactleave="unsetBackground" />
   </div>
 </template>
 
 <script>
-import PageHeader from '@/components/PageHeader';
 import Contact from '@/components/Contact';
-import DynamicBg from '@/components/DynamicBg';
-import Footer from '@/components/Footer';
 
 export default {
-  transition: 'fade',
   components: {
-    PageHeader,
-    Contact,
-    DynamicBg,
-    Footer
+    Contact
   },
   data() {
     return {
-      bg: null,
-      isMobileOrTablet: false
+      background: null
     };
   },
-  mounted() {
-    this.isMobileOrTablet = this.$isMobileOrTablet();
-  },
+  mounted() {},
   methods: {
-    setBackground(bg) {
-      this.bg = bg;
+    setBackground(background) {
+      this.background = background;
     },
     unsetBackground() {
-      this.bg = null;
+      this.background = null;
     }
   }
 };

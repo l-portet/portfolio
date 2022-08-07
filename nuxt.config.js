@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Lucas Portet - Full stack developer',
+    title: 'Lucas Portet - Software Engineer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

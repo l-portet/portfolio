@@ -6,8 +6,8 @@ $breakpoint-xs: 440px;
 $font-stack: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Roboto, 'Helvetica Neue', Arial, sans-serif;
 
-$default-bg: #30353b;
-$default-bg-gradient: linear-gradient(to top right, #24282c, #3c434a);
+$default-background: #30353b;
+$default-background-gradient: linear-gradient(to top right, #24282c, #3c434a);
 
 $text-color: #ffffff;
 $text-color-light: rgba(255, 255, 255, 0.8);
@@ -15,5 +15,5 @@ $link-color-hover: #6ba3e7;
 $link-underline-color-hover: rgba(107, 163, 231, 0.7);
 
 :export {
-  default-bg-gradient: $default-bg-gradient;
+  default-background-gradient: $default-background-gradient;
 }

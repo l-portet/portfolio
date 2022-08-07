@@ -15,12 +15,13 @@
 export default {
   data() {
     return {
-      location: `34.0201613"N -118.6919205,10"E`
+      location: `33°48'01.5"N 118°17'46.3"W`
     };
   },
   computed: {
     locationLink() {
-      return `https://www.google.com/maps/place/${this.location}`;
+      const locationParam = encodeURIComponent(this.location);
+      return `https://www.google.com/maps/place?q=${locationParam}`;
     }
   },
   mounted() {},

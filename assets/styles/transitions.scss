@@ -1,26 +1,28 @@
-.fade-enter-active {
-  animation: fade-in 0.5s;
+.page-enter-active {
+  animation: page-in 0.5s;
+  transform-origin: 50% 0%;
 }
-.fade-leave-active {
-  animation: fade-out 0.5s;
+.page-leave-active {
+  animation: page-out 0.5s;
+  transform-origin: 50% 0%;
 }
-@keyframes fade-in {
+@keyframes page-in {
   0% {
-    transform: translateX(-50px);
+    transform: scale(.9);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
-@keyframes fade-out {
+@keyframes page-out {
   0% {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
   100% {
-    transform: translateX(50px);
+    transform: scale(.9);
     opacity: 0;
   }
 }
