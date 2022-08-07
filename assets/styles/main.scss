@@ -1,7 +1,9 @@
-@import './fonts.scss';
 @import './vars.scss';
+@import './fonts.scss';
 @import './mixins.scss';
 @import './transitions.scss';
+@import './animations.scss';
+
 @import './partials/header.scss';
 @import './partials/blob.scss';
 @import './partials/dynamic-background.scss';
