@@ -1,73 +1,154 @@
 <template>
-  <div class="background-wrapper">
-    <div class="background-wrapper-item"></div>
-    <div
-      v-for="(background, index) in backgroundItems"
-      :key="index"
-      :style="
-        `background: linear-gradient(to top right, ${background.from}, ${background.to});`
-      "
-      class="background-wrapper-item-color"
-    ></div>
-  </div>
+  <v-stage
+    class="background-canvas"
+    :config="{ width: windowWidth, height: windowHeight }"
+  >
+    <v-layer>
+      <v-rect
+        v-for="(background, index) in backgrounds"
+        :key="index"
+        :config="{
+          ...baseConfig,
+          fillLinearGradientColorStops: [0, background.from, 1, background.to]
+        }"
+        :ref="`background-${index}`"
+      ></v-rect>
+    </v-layer>
+  </v-stage>
 </template>
 
 <script>
-import styleVars from '@/assets/styles/vars.scss';
+import windowSize from '@/mixins/window-size.js';
+import { mapState } from 'vuex';
 
 export default {
+  mixins: [windowSize],
   data() {
     return {
-      timeout: null,
-      backgroundItems: [],
-      defaultBackground: {
-        from: null,
-        to: null
-      }
+      duration: 500,
+      backgrounds: [],
+      lastOperation: ['']
     };
   },
-  mounted() {
-    this.extractStyleVars();
-    // We have to trick because Vue doesn't watch getters
-    this.$store.subscribe((mutation, state) => {
-      if (mutation.type === 'SET_BACKGROUND') {
-        this.onBackgroundChange(state.background);
-      }
-    });
+  computed: {
+    ...mapState(['background']),
+    baseConfig() {
+      return {
+        opacity: 0,
+        width: this.windowWidth,
+        height: this.windowHeight,
+        fillLinearGradientStartPoint: { x: 0, y: this.windowHeight },
+        fillLinearGradientEndPoint: { x: this.windowWidth, y: 0 }
+      };
+    }
+  },
+  watch: {
+    '$store.state.background'() {
+      this.onBackgroundChange();
+    }
   },
   methods: {
-    extractStyleVars() {
-      let rawGradient = styleVars['default-background-gradient'];
-
-      rawGradient = rawGradient.split(',');
-      this.defaultBackground.from = rawGradient[1];
-      // Remove the ')' character at end
-      this.defaultBackground.to = rawGradient[2].substring(
-        0,
-        rawGradient[2].length - 1
-      );
-    },
-    onBackgroundChange(background) {
-      console.log('onBackgroundChange', background);
-      if (background !== null) this.setBackground(background);
-      else this.unsetBackground();
+    onBackgroundChange() {
+      const [opName, opBackground] = this.lastOperation;
+      if (this.background !== null) {
+        if (
+          opName === 'setBackground' &&
+          opBackground.from === this.background.from &&
+          opBackground.to === this.background.to
+        ) {
+          return;
+        }
+        this.setBackground(this.background);
+      } else {
+        if (opName === 'unsetBackground') {
+          return;
+        }
+        this.unsetBackground();
+      }
     },
     setBackground(background) {
-      if (!background || !background.from || !background.to) return;
-      clearTimeout(this.timeout);
+      if (!background || !background.from || !background.to) {
+        return;
+      }
+      this.lastOperation = ['setBackground', background];
+      this.backgrounds.push(background);
 
-      this.backgroundItems.push(background);
-      this.clearBackgroundItems();
+      this.$nextTick(() => {
+        const rects = this.getBackgroundRects();
+        const rect = rects[rects.length - 1];
+
+        if (rect) {
+          this.revealBackground(rect);
+        }
+      });
+    },
+    revealBackground(rect) {
+      return new Promise(resolve => {
+        const onFrame = ({ time, node }) => {
+          const opacity = time / this.duration;
+          node.setOpacity(opacity);
+        };
+        const onEnd = ({ node }) => {
+          node.setOpacity(1);
+          resolve();
+        };
+
+        this.animate(rect, this.duration, onFrame, onEnd);
+      });
     },
     unsetBackground() {
-      clearTimeout(this.timeout);
-      this.backgroundItems.push(this.defaultBackground);
-      this.clearBackgroundItems();
+      this.lastOperation = ['unsetBackground'];
+      const rects = this.getBackgroundRects();
+
+      for (const rect of rects) {
+        const node = rect.getNode();
+        if (node.getOpacity() !== 0) {
+          this.hideBackground(rect);
+        }
+      }
     },
-    clearBackgroundItems() {
-      this.timeout = setTimeout(() => {
-        this.backgroundItems.splice(0, this.backgroundItems.length - 3);
-      }, 500);
+    hideBackground(rect) {
+      return new Promise(resolve => {
+        const onFrame = ({ time, node }) => {
+          const opacity = 1 - time / this.duration;
+          node.setOpacity(opacity);
+        };
+        const onEnd = ({ node }) => {
+          node.setOpacity(0);
+          resolve();
+        };
+
+        this.animate(rect, this.duration, onFrame, onEnd);
+      });
+    },
+    getBackgroundRects() {
+      const rects = [];
+      for (const prop in this.$refs) {
+        const [rect] = this.$refs[prop];
+        if (rect && prop.startsWith('background-')) {
+          rects.push(rect);
+        }
+      }
+      return rects;
+    },
+    animate(rect, duration, onFrame, onEnd) {
+      let hasEnded = false;
+      const node = rect.getNode();
+      const animation = new Konva.Animation(function(frame) {
+        const { time } = frame;
+        const args = { time, node };
+
+        if (time < duration) {
+          onFrame(args);
+        } else {
+          if (!hasEnded) {
+            hasEnded = true;
+            animation.stop();
+            onEnd(args);
+          }
+        }
+      }, rect);
+      animation.start();
     }
   }
 };

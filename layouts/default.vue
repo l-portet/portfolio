@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import PageHeader from '@/components/PageHeader';
 import DynamicBackground from '@/components/DynamicBackground';
 import PageFooter from '@/components/PageFooter';
@@ -27,7 +28,13 @@ export default {
     this.logEasterEgg();
     this.isMobileOrTablet = this.$isMobileOrTablet();
   },
+  watch: {
+    $route() {
+      this.resetBackground();
+    }
+  },
   methods: {
+    ...mapActions(['resetBackground']),
     logEasterEgg() {
       const titleStyle = `padding: 20px; background-color: darkblue; color: white; font-size: 1.5em;`;
       const subtitleStyle = `padding: 20px; background-color: darkblue; color: white; font-style:

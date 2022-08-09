@@ -30,6 +30,7 @@ import { mapActions } from 'vuex';
 export default {
   data() {
     return {
+      lastFocusedIndex: -1,
       focusedIndex: -1,
       dataWorks: [
         {
@@ -182,13 +183,21 @@ export default {
       let work = this.works[i];
 
       this.focusedIndex = i;
-      if (!work || !work.gradient) return;
 
-      this.updateBackground(work.gradient);
+      if (!work || !work.gradient) {
+        return;
+      }
+      if (this.focusedIndex !== this.lastFocusedIndex) {
+        this.updateBackground(work.gradient);
+      }
+      this.lastFocusedIndex = this.focusedIndex;
     },
     unFocusWork() {
-      this.resetBackground();
       this.focusedIndex = -1;
+      if (this.focusedIndex !== this.lastFocusedIndex) {
+        this.resetBackground();
+      }
+      this.lastFocusedIndex = -1;
     }
   }
 };

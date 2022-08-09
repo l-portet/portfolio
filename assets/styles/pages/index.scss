@@ -39,13 +39,13 @@
 }
 
 .is-mobile-or-tablet .work {
-  padding: 0 0 50px 0;
+  padding: 0 0 0 0;
   margin: 0;
 }
 
 .works {
   padding: 50px 0;
-  animation: slide-up .8s ease-in-out 1;
+  animation: slide-up 0.8s ease-in-out 1;
 
   .work {
     position: relative;
@@ -72,6 +72,10 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.2s ease-in-out;
       backdrop-filter: blur(9px);
+
+      @media (max-width: $breakpoint-s) {
+        backdrop-filter: none;
+      }
     }
 
     .work-name,

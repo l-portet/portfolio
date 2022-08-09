@@ -1,6 +1,5 @@
 <template>
   <div class="page">
-    <dynamic-background :raw-background="background" />
     <div class="about">
       <div class="profile-picture"></div>
       <h1>Hi, I’m Lucas <img src="@/static/icons/waving-hand.png" /></h1>
@@ -22,7 +21,7 @@
         <a href="/resume-en.pdf" target="_blank">grab my resume</a>.
       </p>
     </div>
-    <contact @contacthover="setBackground" @contactleave="unsetBackground" />
+    <contact />
   </div>
 </template>
 
@@ -32,20 +31,6 @@ import Contact from '@/components/Contact';
 export default {
   components: {
     Contact
-  },
-  data() {
-    return {
-      background: null
-    };
-  },
-  mounted() {},
-  methods: {
-    setBackground(background) {
-      this.background = background;
-    },
-    unsetBackground() {
-      this.background = null;
-    }
   }
 };
 </script>

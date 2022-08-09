@@ -72,7 +72,11 @@ export default {
    */
   plugins: [
     {
-      src: '~/plugins/isMobileOrTablet',
+      src: '~/plugins/platform-detect',
+      ssr: false
+    },
+    {
+      src: '~/plugins/vue-konva',
       ssr: false
     }
   ],

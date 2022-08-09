@@ -1,4 +1,4 @@
-.background-wrapper {
+.background-canvas {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -7,45 +7,4 @@
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-.background-wrapper-item {
-  width: 100vw;
-  height: 100vh;
-  background: $default-background-gradient;
-  z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: background 0.5s ease-in-out;
-}
-
-.background-wrapper-item-color {
-  width: 100vw;
-  height: 100vh;
-  background: $default-background-gradient;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left top;
-  z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  animation-name: FadeIn;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-}
-
-@keyframes FadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
