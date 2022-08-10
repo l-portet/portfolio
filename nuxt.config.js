@@ -78,6 +78,10 @@ export default {
     {
       src: '~/plugins/vue-konva',
       ssr: false
+    },
+    {
+      src: '~/plugins/switch',
+      ssr: false
     }
   ],
   /*

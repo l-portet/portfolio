@@ -4,8 +4,10 @@
       Lucas Portet
     </nuxt-link>
     <nav>
-      <nuxt-link v-if="$route.name === 'about'" to="/">Works</nuxt-link>
-      <nuxt-link v-else to="/about">About</nuxt-link>
+      <div v-switch="$route.name">
+        <nuxt-link v-case="'about'" to="/">Works</nuxt-link>
+        <nuxt-link v-case="'index'" to="/about">About</nuxt-link>
+      </div>
     </nav>
   </header>
 </template>
@@ -19,11 +21,11 @@ export default {
     };
   },
   mounted() {
-    this.checkScroll();
-    document.addEventListener('scroll', this.checkScroll);
+    this.onScroll();
+    document.addEventListener('scroll', this.onScroll);
   },
   methods: {
-    checkScroll() {
+    onScroll() {
       if (window.scrollY > 40 && !this.scrolled) {
         this.scrolled = true;
         this.timeout = setTimeout(() => {
