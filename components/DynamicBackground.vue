@@ -27,7 +27,8 @@ export default {
     return {
       duration: 500,
       backgrounds: [],
-      lastOperation: ['']
+      lastOperation: [''],
+      animations: []
     };
   },
   computed: {
@@ -134,7 +135,9 @@ export default {
     animate(rect, duration, onFrame, onEnd) {
       let hasEnded = false;
       const node = rect.getNode();
-      const animation = new Konva.Animation(function(frame) {
+      onEnd = onEnd.bind(onEnd, { node });
+
+      const konvaAnimation = new Konva.Animation(function(frame) {
         const { time } = frame;
         const args = { time, node };
 
@@ -143,12 +146,27 @@ export default {
         } else {
           if (!hasEnded) {
             hasEnded = true;
-            animation.stop();
-            onEnd(args);
+            konvaAnimation.stop();
+            onEnd();
           }
         }
       }, rect);
-      animation.start();
+
+      for (const animation of this.animations) {
+        const { konvaAnimation, onEnd } = animation;
+        if (animation.ended || !konvaAnimation.isRunning()) {
+          continue;
+        }
+        onEnd();
+        konvaAnimation.stop();
+        animation.ended = true;
+      }
+      const animation = {
+        konvaAnimation,
+        onEnd
+      };
+      this.animations.push(animation);
+      konvaAnimation.start();
     }
   }
 };
