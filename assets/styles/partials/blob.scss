@@ -23,13 +23,10 @@
     align-items: center;
     
     @media (max-width: $breakpoint-m) {
-      // width: 150vw;
-      // height: 150vw;
       width: 1000px;
       height: 1000px;
       right: -700px;
       top: -400px;
-      // right: -400px;
     }
     @media (max-width: $breakpoint-xs) {
       top: -500px;

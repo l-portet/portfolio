@@ -12,7 +12,7 @@ $default-background-gradient: linear-gradient(to top right, #24282c, #3c434a);
 $text-color: #ffffff;
 $text-color-light: rgba(255, 255, 255, 0.8);
 $link-color-hover: #6ba3e7;
-$link-underline-color-hover: rgba(107, 163, 231, 0.7);
+$link-underline-color-hover: transparent;
 
 :export {
   default-background-gradient: $default-background-gradient;
