@@ -1,5 +1,4 @@
 export default {
-  mode: 'universal',
   /*
    ** Headers of the page
    */
@@ -73,10 +72,6 @@ export default {
   plugins: [
     {
       src: '~/plugins/platform-detect',
-      ssr: false
-    },
-    {
-      src: '~/plugins/vue-konva',
       ssr: false
     },
     {
