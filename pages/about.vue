@@ -26,11 +26,21 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import Contact from '@/components/Contact';
 
 export default {
   components: {
     Contact
+  },
+  methods: {
+    ...mapActions(['updateBackground'])
+  },
+  mounted() {
+    this.updateBackground({
+      from: '#4718B0',
+      to: '#AA50DA'
+    });
   }
 };
 </script>

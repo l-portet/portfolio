@@ -4,7 +4,6 @@ export const state = () => ({
 
 export const mutations = {
   SET_BACKGROUND(state, payload) {
-    console.log('SETBACKGROUND', payload);
     state.background = payload;
   }
 };
