@@ -10,7 +10,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: `Lucas Portet, developer & maker. I'm building my ideas.`
+        content: `Lucas Portet, developer & maker.`
       },
       { name: 'reply-to', content: 'contact@lucasportet.com' },
       { name: 'owner', content: 'Lucas Portet, contact@lucasportet.com' },
@@ -18,7 +18,25 @@ export default {
       { name: 'identifier-URL', content: 'http://lucasportet.com' },
       { name: 'author', content: 'Lucas Portet, contact@lucasportet.com' },
       { name: 'coverage', content: 'Worldwide' },
-      { name: 'distribution', content: 'Global' }
+      { name: 'distribution', content: 'Global' },
+      { hid: 'og-type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og-title',
+        property: 'og:title',
+        content: 'Lucas Portet'
+      },
+      {
+        hid: 'og-desc',
+        property: 'og:description',
+        content: `Interdisciplinary software engineer focused on crafting delightful experiences.`
+      },
+      {
+        hid: 'og-image',
+        property: 'og:image',
+        content: '/img/og-social.png'
+      },
+      { hid: 'og-url', property: 'og:url', content: 'https://lucasportet.com' },
+      { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
