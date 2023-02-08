@@ -33,7 +33,7 @@ export default {
       {
         hid: 'og-image',
         property: 'og:image',
-        content: '/img/og-social.png'
+        content: 'http://lucasportet.com/img/og-social.png'
       },
       { hid: 'og-url', property: 'og:url', content: 'https://lucasportet.com' },
       { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' }
