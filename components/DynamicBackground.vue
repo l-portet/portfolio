@@ -27,9 +27,15 @@
 import windowSize from '@/mixins/window-size.js';
 import { mapState } from 'vuex';
 
-const DEFAULT_BACKGROUND = {
-  from: '#24282c',
-  to: '#3c434a'
+const DEFAULT_BACKGROUNDS = {
+  all: {
+    from: '#24282c',
+    to: '#3c434a'
+  },
+  about: {
+    from: '#4718B0',
+    to: '#AA50DA'
+  }
 };
 
 export default {
@@ -39,8 +45,13 @@ export default {
   },
   computed: {
     ...mapState(['background']),
+    defaultBackground() {
+      return this.$nuxt.$route.name === 'about'
+        ? DEFAULT_BACKGROUNDS.about
+        : DEFAULT_BACKGROUNDS.all;
+    },
     activeBackground() {
-      return this.background || DEFAULT_BACKGROUND;
+      return this.background || this.defaultBackground;
     }
   }
 };

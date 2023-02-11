@@ -10,7 +10,6 @@ export const mutations = {
 
 export const actions = {
   updateBackground({ commit }, payload) {
-    console.log('updateBackground', payload);
     commit('SET_BACKGROUND', payload);
   },
   resetBackground({ commit }) {
