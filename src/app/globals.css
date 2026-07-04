@@ -15,9 +15,3 @@
 body {
   font-family: var(--font-mono);
 }
-
-a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
